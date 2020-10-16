@@ -10,9 +10,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CMake@1
-  inputs:
-    cmakeArgs: '-Dtest=ON ..'
+- script: cmake -Dtest=ON ..
+  displayName: "run CMAKE"
 - script: |
     make
   displayName: 'make'
