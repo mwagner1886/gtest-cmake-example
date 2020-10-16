@@ -12,8 +12,7 @@ pool:
 steps:
 - task: CMake@1
   inputs:
-    workingDirectory: 
-    cmakeArgs: '-Dtest=ON ..'
+    cmakeArgs: 
 - script: |
     make
   displayName: 'make'
